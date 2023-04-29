@@ -1,0 +1,60 @@
+.search-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  z-index: 1;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-input {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  font-size: 16px;
+  background-color: #f1f1f1;
+  width: 70%;
+  max-width: 600px;
+}
+
+.search-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  font-size: 16px;
+  height: 40px;
+  width: 30%;
+  max-width: 200px;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-btn:hover {
+  background-color: #45a049;
+}
+
+/* Make the button stick to the top of the screen when the user scrolls */
+.search-container.sticky {
+  position: fixed;
+  top: 0;
+}
+
+/* Add some margin to the body when the search bar is stuck to the top */
+body.sticky-search {
+  margin-top: 100px;
+}
+
+.title{
+  position: absolute;
+}
