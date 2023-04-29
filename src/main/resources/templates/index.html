@@ -10,22 +10,23 @@
     <h1 class="title">Search Zone</h1>
     <form action="/search" method="GET">
     <div class="search-box">
-            <input type="text" class="search-input" placeholder="Search here for funny videos!" name="query">
+            <input type="text" class="search-input" placeholder="Search here for videos!!" name="query">
             <button type="submit" class="search-btn"><i class="fas fa-search">Search</i></button>
     </div>
     </form>
 </div>
 
-<h1>Search Results</h1>
-<ul>
-    <li th:each="result : ${searchResults}">
-        <h2 th:text="${result.getSnippet().getTitle()}"></h2>
-        <p th:text="${result.getSnippet().getDescription()}"></p>
-        <img th:src="${result.getSnippet().getThumbnails().getDefault().getUrl()}" th:alt="${result.getSnippet().getTitle()}">
-        <a th:href="'https://www.youtube.com/watch?v=' + ${result.getId().getVideoId()}" target="_blank">Watch on YouTube</a>
-    </li>
-</ul>
 
+<div class="container">
+    <h1>Search Results</h1>
+    <ul>
+        <li th:each="result : ${searchResults}">
+            <h2 th:text="${result.getSnippet().getTitle()}"></h2>
+            <img th:src="${result.getSnippet().getThumbnails().getDefault().getUrl()}" th:alt="${result.getSnippet().getTitle()}">
+            <a th:href="'https://www.youtube.com/watch?v=' + ${result.getId().getVideoId()}" target="_blank">Watch on YouTube</a>
+        </li>
+    </ul>
+</div>
 <!-- Include Font Awesome icons -->
 <script src="https://kit.fontawesome.com/6c7f8a1efa.js" crossorigin="anonymous"></script>
 
