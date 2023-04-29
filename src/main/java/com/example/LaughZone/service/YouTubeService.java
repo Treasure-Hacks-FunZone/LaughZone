@@ -20,7 +20,7 @@ public class YouTubeService {
 
     private static final String APPLICATION_NAME = "My YouTube API Client";
     private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
-    private static final String API_KEY = "AIzaSyA-UQmq59YTU8_sSJD0AdCwpA4MZdjzeM0";
+    private static final String API_KEY = "";
     private static final long MAX_RESULTS = 10;
 
     public List<SearchResult> search(String query) throws IOException, GeneralSecurityException {
